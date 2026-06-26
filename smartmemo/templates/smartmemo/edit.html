@@ -1,0 +1,17 @@
+<h1>メモを編集</h1>
+
+<form method="post">
+
+    {%csrf_token%}
+
+    <p>タイトル</p>
+    <input type="text" name="title" value="{{memo.title}}">
+
+    <p>内容</p>
+    <textarea name="content">{{memo.content}}</textarea>
+
+    <br><br>
+
+    <button type="submit">更新</button>
+
+</form>

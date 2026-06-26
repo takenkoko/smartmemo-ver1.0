@@ -1,0 +1,15 @@
+<h1>SmartMemo.ver1.0へようこそ!</h1>
+
+<hr>
+
+{% for memo in memos %}
+<h2>{{ memo.title }}</h2>
+<p>{{ memo.content }}</p>
+
+<a href="/edit/{{memo.id}}/">編集</a>
+<a href="/delete/{{memo.id}}/">削除</a>
+
+<hr>
+{% endfor %}
+
+<a href="create/">新しいメモ作成</a>

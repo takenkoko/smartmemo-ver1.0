@@ -1,0 +1,17 @@
+<h1>新しいメモ</h1>
+
+<form method="post">
+
+    {% csrf_token%}
+
+    <p>タイトル</p>
+    <input type="text" name="title">
+
+    <p>内容</p>
+    <textarea name="content"></textarea>
+
+    <br><br>
+
+    <button type="submit">保存</button>
+
+</form>
