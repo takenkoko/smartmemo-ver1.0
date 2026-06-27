@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-    <header>
+    <head>
         <meta charset="UTF-8">
         <title>新しいメモ-SmartMemo</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
         rel="stylesheet">
-    </header>
+    </head>
     <body>
         <div class="container mt-5">
             <h1 class="text-center mb-4">
                 新しいメモ
             </h1>
             
-            <from class="post">
+            <form method="post">
                 {% csrf_token%}
                 
                 <div class="mb-3">
@@ -30,7 +30,6 @@
 
                  <div class="mb-3">
                     <label class="form-label">
-                        
                         内容
                     </label>
                     <textarea name="content" class="form-control" rows="6"></textarea>
@@ -45,7 +44,7 @@
                     戻る
                 </a>
 
-            </from>
+            </form>
         </div>
     </body>
 </html>
