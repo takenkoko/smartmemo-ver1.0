@@ -1,47 +1,31 @@
-<!DOCTYPE html>
-<html lang="ja">
+{% extends "smartmemo/base.html"%}
 
-<head>
-    <meta charset="UTF-8">
-    <title>SmartMemo</title>
+{% block title%}
+Smart memo
+{% endblock %}
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-    rel="stylesheet">
-</head>
-<body>
+{% block content %}
 
-    <div class="container mt-5">
-
-        <h1 class="text-center mb-4">
-            SmartMemo.ver1.0へようこそ!
-
-        </h1>
-        <p class="text-center text-muted">
-            シンプルなメモ管理アプリ
-        </p>
+<h1>
+SmartMemo.ver1.0へようこそ!
+</h1>
+<p>
+    シンプルなメモ管理アプリ
+</p>
         
-        {% for memo in memos %}
-        <div class="card mb-3 shadow-sm"> <!--カードに影をつける-->
-            <div class="card-body">
-                <h4>{{ memo.title }}</h4>
-                
-                <p>{{ memo.content }}</p>
-                
-                <a href="/edit/{{memo.id}}/" class="btn btn-warning btn-sm">
-                    編集
-                </a>
-                <a href="/delete/{{memo.id}}/" class="btn btn-danger btn-sm">
-                    削除
-                </a>
-            </div>
-        </div>
-        
-        {% endfor %}
-        <a href="create/" class="btn btn-primary btn-lg">
-            +新しいメモ作成
-        </a>
-
-
+{% for memo in memos %}
+<div class="card mb-3 shadow-sm"> <!--カードに影をつける-->
+    <div class="card-body">
+        <h4>{{ memo.title }}</h4>
+        <p>{{ memo.content }}</p>
+        <a href="/edit/{{memo.id}}/" class="btn btn-warning btn-sm">編集</a>
+        <a href="/delete/{{memo.id}}/" class="btn btn-danger btn-sm">削除</a>
     </div>
-</body>
-</html>
+</div>
+{% endfor %}
+        
+<a href="create/" class="btn btn-primary btn-lg">
+    +新しいメモ作成
+</a>
+
+{% endblock %}
