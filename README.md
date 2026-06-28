@@ -22,10 +22,10 @@ DjangoとBootstrapで構築したシンプルなメモアプリです。
 - Responsive UI improvements
 
   ## Ver2.0で追加する機能
-  １，ナビゲーションバーを追加
-  ２，検索機能
-  ３，カテゴリ機能
-  ４，ログイン機能（SQLite ➡　PostgreSQL）
+- ナビゲーションバーを追加
+-  検索機能
+- カテゴリ機能
+- ログイン機能（SQLite ➡　PostgreSQL）
 
   ## 開発メモ
   SmartMemoは、Djangoの学習とWebアプリケーション開発の理解の目的として開発しています。
